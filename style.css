@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#2a0f0b;
+    color:white;
+    font-family:"Poppins", sans-serif;
+}
+
+.navbar{
+    height:70px;
+    background:#4a1710;
+    padding:0 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+.brand{
+    text-decoration:none;
+    color:white;
+    border:2px solid #d8b28a;
+    padding:6px 18px;
+    font-size:20px;
+}
+
+.logoName{
+    font-family:"Cinzel", serif;
+    letter-spacing:3px;
+    font-weight:700;
+}
+
+.navLinks{
+    list-style:none;
+    display:flex;
+    gap:28px;
+}
+
+.link{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+}
+
+.link:hover{
+    color:#d8b28a;
+}
+
+#check{
+    display:none;
+}
+
+.icons{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+#cancelIcon{
+    display:none;
+}
+
+.hero{
+    margin-top:70px;
+    padding:45px 3% 70px;
+    text-align:center;
+    background:#34110d;
+}
+
+.heroText{
+    margin-bottom:35px;
+}
+
+.est{
+    color:#f6e1c7;
+    font-size:26px;
+    letter-spacing:8px;
+    margin-bottom:18px;
+}
+
+.heroTitle{
+    color:white;
+    font-family:"Cinzel", serif;
+    font-size:85px;
+    font-weight:400;
+    letter-spacing:12px;
+    margin-bottom:12px;
+}
+
+.heroSub{
+    color:#f6e1c7;
+    font-size:24px;
+    letter-spacing:6px;
+    text-transform:uppercase;
+}
+
+.heroBanner img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+.coffeeSection{
+    min-height:390px;
+    padding:70px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    background:#2a0f0b;
+}
+
+.coffeeSection:nth-child(odd){
+    background:#3b140f;
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+.sectionImage{
+    flex:1;
+    text-align:center;
+}
+
+.sectionImage img{
+    width:360px;
+    max-width:100%;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.5);
+}
+
+.sectionText{
+    flex:1;
+}
+
+.sectionText h2{
+    color:white;
+    font-size:32px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.sectionText p{
+    color:#f1d9c0;
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:25px;
+    width:85%;
+}
+
+button{
+    padding:11px 24px;
+    background:transparent;
+    border:2px solid #d8b28a;
+    color:white;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d8b28a;
+    color:#2a0f0b;
+}
+
+.contact{
+    background:#160807;
+    color:white;
+    text-align:center;
+    padding:35px 8%;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    font-size:13px;
+}
+
+.socialIcons{
+    margin-top:18px;
+}
+
+.socialIcons a{
+    color:white;
+    margin:0 10px;
+    font-size:22px;
+    text-decoration:none;
+}
+
+.socialIcons a:hover{
+    color:#d8b28a;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .brand{
+        font-size:16px;
+        padding:5px 10px;
+    }
+
+    .icons{
+        display:flex;
+    }
+
+    .navLinks{
+        position:absolute;
+        top:70px;
+        left:0;
+        background:#4a1710;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
+    }
+
+    #check:checked ~ .navLinks{
+        display:flex;
+    }
+
+    #check:checked ~ .icons #menu-btn{
+        display:none;
+    }
+
+    #check:checked ~ .icons #cancelIcon{
+        display:block;
+    }
+
+    .hero{
+        padding:35px 4% 50px;
+    }
+
+    .heroTitle{
+        font-size:42px;
+        letter-spacing:5px;
+    }
+
+    .heroSub{
+        font-size:15px;
+        letter-spacing:3px;
+    }
+
+    .est{
+        font-size:16px;
+        letter-spacing:4px;
+    }
+
+    .heroBanner img{
+        height:280px;
+    }
+
+    .coffeeSection,
+    .reverse{
+        flex-direction:column;
+        text-align:center;
+        padding:55px 8%;
+    }
+
+    .sectionText p{
+        width:100%;
+    }
+
+    .sectionImage img{
+        width:280px;
+    }
+}
